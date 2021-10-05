@@ -18,9 +18,10 @@ int main()
         {
             if(simbolos[i]=='(' || simbolos[i]=='[')
                 pila.push(simbolos[i]);
-            if(simbolos[i]==')')
+
+            else if (simbolos[i]==')')
             {
-                if (pila.top() == '(' && !pila.empty()) {
+                if (!pila.empty() && pila.top() == '(') {
                     pila.pop();
                 }
                 else {
@@ -30,7 +31,7 @@ int main()
             }
             else if (simbolos[i]==']')
             {
-                if(pila.top() == '[' && !pila.empty()) {
+                if(!pila.empty() && pila.top() == '[') {
                     pila.pop();
                 }
                 else {
@@ -43,7 +44,9 @@ int main()
             cout << "Yes" << endl;
         else
             cout << "No" << endl;
-    }
 
+        while(!pila.empty())
+            pila.pop();
+    }
     return 0;
 }
