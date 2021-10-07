@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+bool binarioMatriz(int mat[][4], int fil, int col, int val)
+{
+    int ini = 0, fin = fil*col, mid, x, y;
+
+        while(ini < fin)
+        {
+            mid = (ini+fin)/2;
+            x = mid/col;
+            y = mid%col;
+
+            if (val > mat[x][y])
+                ini = mid+1;
+            else if (val < mat[x][y])
+                fin = mid;
+            else
+                return true;
+        }
+        return false;
+}
+
+int main()
+{
+    int mat[3][4] = {{1,3,5},
+                     {7,9,11},
+                     {13,15,17}};
+
+    cout << binarioMatriz(mat, 3, 4, 8);
+    return 0;
+}
