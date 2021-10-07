@@ -1,3 +1,8 @@
+/***
+Programa para verificar si un numero pertenece a una matriz
+utilizando busqueda binaria
+***/
+
 #include<iostream>
 using namespace std;
 
@@ -27,6 +32,15 @@ int main()
                      {7,9,11},
                      {13,15,17}};
 
-    cout << binarioMatriz(mat, 3, 4, 8);
+    // Ejemplo 1:
+    // Entrada: {{1,3,5},{7,9,11},{13,15,17}} , nro_a_buscar: 8
+    // Salida : 0 (falso)
+
+    cout << binarioMatriz(mat, 3, 4, 8) << endl;
+
+    // Ejemplo 2:
+    // Entrada: {{1,3,5},{7,9,11},{13,15,17}} , nro_a_buscar: 9
+    // Salida : 1 (verdadero)
+    cout << binarioMatriz(mat, 3, 4, 9) << endl;
     return 0;
 }
