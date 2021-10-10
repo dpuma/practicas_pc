@@ -106,7 +106,7 @@ int main()
         }
 
         // contar sospechosos
-        int acum = 0;
+        long acum = 0;
         for(int i = 0; i < est_sospechosos.size(); i++)
         {
             if(est_sospechosos[i]== 2)
